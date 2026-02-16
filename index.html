@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nana Akua Pageant Flyer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #1a1a1a;
+            color: white;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .flyer-container {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 4 / 6;
+            background: #0d0d0d;
+            position: relative;
+            overflow: visible;
+            border: 12px solid;
+            border-image: linear-gradient(135deg, #000000 0%, #bf953f 25%, #fcf6ba 50%, #bf953f 75%, #000000 100%) 1;
+            box-shadow: 0 0 30px rgba(191, 149, 63, 0.4), 0 0 60px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(191, 149, 63, 0.1);
+        }
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 75%;
+            background: linear-gradient(to bottom, transparent 0%, #0d0d0d 80%);
+        }
+        .gold-accent {
+            background: linear-gradient(45deg, #bf953f 0%, #fcf6ba 45%, #b38728 70%, #fbf5b7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.3));
+        }
+        .gold-bg {
+            background: linear-gradient(45deg, #bf953f, #fcf6ba, #aa771c);
+        }
+        .btn-gold {
+            background: linear-gradient(45deg, #bf953f, #fcf6ba, #aa771c);
+            color: #000;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .ornament {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #bf953f, transparent);
+            width: 60%;
+            margin: 10px auto;
+        }
+        .vote-badge {
+            background: linear-gradient(90deg, #fcf6ba 0%, #bf953f 50%, #b38728 100%);
+            color: #000;
+            font-weight: 800;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 999px;
+            box-shadow: 0 10px 30px rgba(191,149,63,0.25), 0 2px 6px rgba(0,0,0,0.5);
+            -webkit-backdrop-filter: none;
+            transform-origin: center;
+            animation: pulse 1800ms ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 8px 24px rgba(191,149,63,0.18); }
+            50% { transform: scale(1.05); box-shadow: 0 14px 40px rgba(191,149,63,0.28); }
+            100% { transform: scale(1); box-shadow: 0 8px 24px rgba(191,149,63,0.18); }
+        }
+        @keyframes sparkle {
+            0%, 100% {
+                filter: drop-shadow(0px 0px 8px rgba(191, 149, 63, 0.5)) drop-shadow(0px 0px 4px rgba(252, 246, 186, 0.3));
+            }
+            50% {
+                filter: drop-shadow(0px 0px 20px rgba(191, 149, 63, 0.8)) drop-shadow(0px 0px 10px rgba(252, 246, 186, 0.6));
+            }
+        }
+        .akua-bold {
+            animation: sparkle 2s ease-in-out infinite;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="flyer-container" id="flyer-content">
+        <!-- Header Image Section -->
+        <div class="relative h-[70%]">
+            <img src="pexels-karl-rayson-17018844.jpg" alt="Nana Akua" class="w-full h-full object-cover object-top" onerror="this.src='https://images.pexels.com/photos/17018844/pexels-photo-17018844.jpeg?auto=compress&cs=tinysrgb&w=1200'">
+           
+            <div class="image-overlay"></div>
+           
+            <!-- Branding -->
+            <div class="absolute top-10 left-0 right-0 text-center px-6">
+                <p class="uppercase tracking-[0.4em] text-[10px] mb-2 text-white opacity-80 font-bold">Representing Obomeng-Kwahu</p>
+                <div class="ornament mb-4"></div>
+                <h1 class="serif text-6xl font-bold gold-accent leading-tight">#4</h1><br>
+                <h1 class="serif text-8xl font-black gold-accent leading-[0.5] mb-6 akua-bold">AKUA</h1>
+               
+                <!-- Voting Highlight -->
+                <div class="inline-block vote-badge mt-4" role="status" aria-live="polite">
+                    <p class="text-xl font-extrabold tracking-widest uppercase" style="letter-spacing:0.12em; margin:0;">
+                        1 CEDI = 1 VOTE
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Voting & Details Section -->
+        <div class="absolute bottom-0 left-0 right-0 px-10 pb-10 text-center">
+           
+            <div class="mb-6">
+                <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 mb-2 font-bold">Support her journey</p>
+                <div class="gold-bg p-[1px] rounded-lg">
+                    <div class="bg-[#0d0d0d] rounded-lg py-4">
+                        <p class="text-3xl font-black tracking-tighter text-white">*928*026#</p>
+                        <p class="text-[10px] uppercase tracking-widest text-gold-accent font-bold mt-1">Dial to Vote (ALL NETWORKS)</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Event Details -->
+            <div class="grid grid-cols-3 gap-2 mb-6 items-center border-t border-white/10 pt-6">
+                <div class="text-right">
+                    <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-1">Grand Finale</p>
+                    <p class="font-bold text-xs">April 5th 2016</p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-[1px] h-8 bg-white/20"></div>
+                </div>
+                <div class="text-left">
+                    <p class="text-[9px] uppercase tracking-widest text-gray-500 mb-1">Venue</p>
+                    <p class="font-bold text-xs uppercase">WAGS HOTEL</p>
+                </div>
+            </div>
+
+
+            <!-- CTA -->
+            <div class="space-y-3">
+                <button class="btn-gold w-full py-3.5 text-xs rounded-md shadow-lg shadow-gold-900/20" onclick="window.location.href='tel:*928*026%23'">
+                    Vote Now
+                </button>
+                <p class="text-[8px] text-gray-500 tracking-[0.2em] uppercase font-semibold">Powered by LTK Tours</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
